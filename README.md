@@ -52,7 +52,7 @@ CustomMessagesX is a BDSX plugin that allows you to customize or disable various
   
   - & more to come !
 
-- Possibility to customize message type !
+- Possibility to customize messages type (for each message) !
   
   - message
   
@@ -68,13 +68,15 @@ CustomMessagesX is a BDSX plugin that allows you to customize or disable various
 
 ### Feel free to open an issue if you want to suggest more messages to add !
 
+You can also implement your own messages by associating their translation key in [`defaultMessages.json`](./resources/defaultMessages.json) with a configuration key that you create in [`config.yml`](./resources/config.yml). (follow the syntax of other messages)
+
 
 
 ## Configuration
 
 You can configure everything within [config.yml](./resources/config.yml)
 
-If you have installed the plugin as an npm module, the configuration can be found here :
+If you have installed the plugin as an npm module, the configuration file can be found here :
 
 ```
 bdsx directory/node_modules/@bdsx/custommessagesx/resources/config.yml
