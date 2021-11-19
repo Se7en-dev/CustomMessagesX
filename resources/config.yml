@@ -1,0 +1,124 @@
+#          _____                    _
+#  ___  __|___  |__ _ __         __| | _____   __
+# / __|/ _ \ / / _ \ '_ \ _____ / _` |/ _ \ \ / /
+# \__ \  __// /  __/ | | |_____| (_| |  __/\ V /
+# |___/\___/_/ \___|_| |_|      \__,_|\___| \_/
+#
+
+# CustomMessagesX - A BDSX plugin allowing you to customize or disable various messages
+
+
+#
+# MOTD (message displayed in the server list)
+#
+motd:
+
+  custom: true # If disabled, default MOTD will be used
+  messages: # List of MOTD messages
+    - §aMy server !
+    - Hello, world !
+    - A BDSX server
+  random_order: false # If enabled, messages will be displayed in a random order
+  # 0 to disable messages changing (note: only the first message will be used, even if multiple are defined)
+  refresh_interval: 5 # Message change interval (in seconds)
+
+
+#
+# All disconnection screen messages
+# nb : You can use translation keys here
+#
+disconnection_messages:
+
+  #
+  # Message displayed when the player is not whitelisted
+  #
+  whitelist:
+
+    enabled: true # If disabled, client will skip the disconnection screen and be sent directly to the main menu
+    custom: true # If disabled, the default message will be used
+    message: "You are not whitelisted !" # The message to display (ignored if custom is set to false)
+
+  #
+  # Message displayed when the player tries to join the server when it is full
+  #
+  server_full:
+
+    enabled: true # If disabled, client will skip the disconnection screen and be sent directly to the main menu
+    custom: true # If disabled, the default message will be used
+    message: "The server is full !" # The message to display (ignored if custom is set to false)
+
+  #
+  # Message displayed when the player has an outdated client
+  #
+  outdated_client:
+
+    enabled: true # If disabled, client will skip the disconnection screen and be sent directly to the main menu
+    custom: true # If disabled, the default message will be used
+    message: "Your client is outdated ! Please update the game" # The message to display (ignored if custom is set to false)
+
+  #
+  # Message displayed when the server is outdated
+  #
+  outdated_server:
+
+    enabled: true # If disabled, client will skip the disconnection screen and be sent directly to the main menu
+    custom: true # If disabled, the default message will be used
+    message: "The server does not yet support this version of Minecraft !" # The message to display (ignored if custom is set to false)
+
+  #
+  # Message displayed when the player is kicked without a reason
+  #
+  kick:
+
+    enabled: true # If disabled, client will skip the disconnection screen and be sent directly to the main menu
+    custom: true # If disabled, the default message will be used
+    message: "You have been kicked from the server !" # The message to display (ignored if custom is set to false)
+
+  #
+  # Message displayed when the player is kicked with a reason
+  #
+  kick_reason:
+
+    enabled: true # If disabled, client will skip the disconnection screen and be sent directly to the main menu
+    custom: true # If disabled, the default message will be used
+    # Use {reason} to display the kick reason
+    message: "You have been kicked ! Reason : {reason}" # Message to display (ignored if custom is set to false)
+
+
+#
+# All text messages
+# n.b : You can use translation keys here (remember to set "needs_translation" to true).
+#
+text_messages:
+
+  #
+  # Message displayed when a player joins the server
+  #
+  player_joined:
+
+    enabled: true # If disabled, no message will be sent
+    custom: true # If disabled, the default message will be used
+    # Can be "message", "popup", "jukebox_popup" or "tip"
+    type: "message" # Message type
+    # Use {player} to display the player name (if you are not using a translation key)
+    message: "§7[§a+§7] {player}" # Message to display (can be a translation key)
+    needs_translation: false # Set to true if you are using a translation key, false otherwise
+
+    # Display a different message when a new player joins the server
+    first_join:
+      enabled: true # If disabled, normal join message will be used
+      # Use {player} to display the player name
+      message: "§dWelcome, {player} !" # Message to display
+
+  #
+  # Message displayed when a player leaves the server
+  #
+  player_left:
+
+    enabled: true # If disabled, no message will be sent
+    custom: true # If disabled, the default message will be used
+    # Can be "message", "popup", "jukebox_popup" or "tip"
+    type: "message" # Message type
+    # Use {player} to display the player name (if you are not using a translation key)
+    message: "§7[§c-§7] {player}" # Message to display (can be a translation key)
+    needs_translation: false # Set to true if you are using a translation key, false otherwise

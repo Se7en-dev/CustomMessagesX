@@ -1,0 +1,16 @@
+{
+  "disconnection_messages": {
+    "disconnectionScreen.notAllowed": {"configKey": "whitelist"},
+    "disconnectionScreen.serverFull": {"configKey": "server_full"},
+    "disconnectionScreen.outdatedClient": {"configKey": "outdated_client"},
+    "disconnectionScreen.outdatedServer": {"configKey": "outdated_server"},
+
+    "%disconnect.kicked": {"configKey": "kick"},
+    "%disconnect.kicked.reason": {"configKey": "kick_reason", "params": ["{reason}"]}
+  },
+
+  "text_messages": {
+    "§e%multiplayer.player.joined": {"configKey": "CANCEL"},
+    "§e%multiplayer.player.left": {"configKey": "player_left", "params": ["{player}"]}
+  }
+}
