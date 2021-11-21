@@ -20,7 +20,7 @@ motd:
     - A BDSX server
   random_order: false # If enabled, messages will be displayed in a random order
   # 0 to disable messages changing (note: only the first message will be used, even if multiple are defined)
-  refresh_interval: 5 # Message change interval (in seconds)
+  refresh_interval: 5 # Message change interval, in seconds (note : MOTD refreshes about every 5 seconds client-side, so setting this value below 5 is discouraged)
 
 
 #
