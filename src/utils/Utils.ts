@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFile, writeFileSync } from "fs";
 import { events } from "bdsx/event";
 import { serverInstance } from "bdsx/bds/server";
 import { TextPacket } from "bdsx/bds/packets";
@@ -21,7 +21,14 @@ events.serverClose.on(() => {
  */
 export function isPlayerNew(playerName: string): boolean {
     const isNew = !knownPlayers.includes(playerName);
-    if(isNew) knownPlayers.push(playerName);
+    if(isNew) {
+        knownPlayers.push(playerName);
+        writeFile(`${__dirname}/../../resources/players.json`, JSON.stringify(knownPlayers), (err) => {
+            if(err) {
+                console.error(err);
+            }
+        });
+    }
     return isNew;
 }
 
