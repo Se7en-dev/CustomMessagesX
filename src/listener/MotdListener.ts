@@ -4,6 +4,7 @@ import { serverInstance } from "bdsx/bds/server";
 
 const motdConfig: any = config.motd;
 let messageId: number = 0;
+let newId: number;
 let intervalId: NodeJS.Timeout;
 
 /**
@@ -12,7 +13,12 @@ let intervalId: NodeJS.Timeout;
 if(motdConfig.custom) {
     if(motdConfig.refresh_interval) {
         intervalId = setInterval(() => {
-            if(motdConfig.random_order) messageId = Math.floor(Math.random() * motdConfig.messages.length);
+            if(motdConfig.random_order) {
+                do {
+                    newId = Math.floor(Math.random() * motdConfig.messages.length);
+                } while(newId === messageId);
+                messageId = newId;
+            }
             serverInstance.setMotd(motdConfig.messages[messageId]);
             if(!motdConfig.random_order) {
                 messageId++;
