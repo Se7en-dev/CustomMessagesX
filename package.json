@@ -1,6 +1,6 @@
 {
   "name": "@bdsx/custommessagesx",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "CustomMessagesX - A BDSX plugin allowing you to customize or disable various messages",
   "main": "./src/CustomMessagesX.js",
   "keywords": ["bdsx", "custom", "messages", "motd"],
